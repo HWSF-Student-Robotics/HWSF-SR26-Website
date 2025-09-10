@@ -11,24 +11,36 @@
             color: #fff;
             text-align: center;
             font-family: 'IBM Plex Serif', sans-serif;
+    
+            margin: 0;
+            /* height: 100dvh; */
+            /* overflow-x: hidden; */
+        }
+
+        section.hero {
+            position: relative;
+            /* width: 100%; */
+            height: 90dvh;
             display: flex;
             flex-direction: column;
             align-items: center;
             align-content: center;
             justify-content: center;
-            height: 100dvh;
-            overflow-y: hidden;
         }
+
         h1 {
             color: #fff;
-            font-family: 'Rampart One';
-            font-size: 3rem;
+            /* font-family: 'Rampart One'; */
+            font-family: 'IBM Plex Serif', sans-serif;
+            font-size: 2.3rem;
+            font-weight: 100;
 
             text-align: center;
 
             letter-spacing: -0.2rem;
 
             margin: 0;
+            margin-bottom: -0.75rem;
         }
 
         h2 {
@@ -56,22 +68,87 @@
             animation-duration: 2s;
             animation-iteration-count: infinite;
         }
+
+        section.signup {
+            background-color: #fff;
+            /* width: 100%; */
+
+            color: rgb(41, 7, 73);
+            padding: 32px;
+        }
+
+        h3 {
+            font-size: 2rem;
+            font-weight: 400;
+            margin: 0;
+            margin-bottom: 1.2rem;
+        }
+
+        div.skills {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+
+        div.skill {
+            background-color: rgb(41, 7, 73);
+            color: #fff;
+            border-radius: 8px;
+            padding: 12px;
+        }
+
+        div.skill h4 {
+            font-weight: 200;
+            font-size: 1.4rem;
+            margin: 0;
+        }
+
+        div.skill p {
+            text-align: left;
+            width: 100%;
+            font-size: 0.8rem;
+        }
     </style>
     <link rel="stylesheet" href="galaxy.css">
 </head>
 <body>
-    <img src="assets/mascot1.png" style="top: 32px; right: 32px;">
-    <img src="assets/mascot2.png" style="bottom: 32px; left: 32px;">
-    <main>
-        <h1>HWSF</h1>
-        <h2>Robotics</h2>
-        <p>Thursday | 16:15 | Room 47</p>
-    </main>
+    <section class="hero">
+        <img src="assets/mascot1.png" style="top: 32px; right: 32px;">
+        <img src="assets/mascot2.png" style="bottom: 32px; left: 32px;">
+        <main>
+            <h1>HWSF</h1>
+            <h2>Robotics</h2>
+            <p>Thursday | 16:15 | Room 46</p>
+        </main>
+    </section>
+
+    <section class="signup">
+        <h3>Join in!</h3>
+        <div class="skills">
+            <div class="skill">
+                <h4>Programmer</h4>
+                <p>Working on what makes the robot run, we tend to program in Python (for the Raspberry Pi) and C++ (for the Arduinos). You don't have to be an expert in programming, though a working understanding helps.</p>
+            </div>
+
+            <div class="skill">
+                <h4>Engineer</h4>
+                <p>Design, make and print the components that make up the robot. Whether you are modelling a part in CAD software (which we provide) or actually fabricating it, engineering is open to all.</p>
+            </div>
+
+            <div class="skill">
+                <h4>Other</h4>
+                <p>If what you can help in isn't here (e.g. illustrators), then come along anyway, all experience is valuable!</p>
+            </div>
+        </div>
+
+    </section>
+
     <div class="bg"></div>
 
     <div class="star-field">
     <div class="layer"></div>
     <div class="layer"></div>
     <div class="layer"></div>
+    </div>
 </body>
 </html>
