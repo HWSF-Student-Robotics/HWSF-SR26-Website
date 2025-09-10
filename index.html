@@ -1,154 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HWSF Robotics</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rampart+One&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+      body {
+        color: #fff;
+        text-align: center;
+        font-family: "IBM Plex Serif", sans-serif;
 
-        body {
-            color: #fff;
-            text-align: center;
-            font-family: 'IBM Plex Serif', sans-serif;
-    
-            margin: 0;
-            /* height: 100dvh; */
-            /* overflow-x: hidden; */
+        margin: 0;
+        /* height: 100dvh; */
+        /* overflow-x: hidden; */
+      }
+
+      section.hero {
+        position: relative;
+        /* width: 100%; */
+        height: 90dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+      }
+
+      h1 {
+        color: #fff;
+        /* font-family: 'Rampart One'; */
+        font-family: "IBM Plex Sans", sans-serif;
+        font-size: 2.5rem;
+        font-weight: 100;
+
+        text-align: center;
+
+        margin: 0;
+        margin-bottom: -0.75rem;
+      }
+
+      h2 {
+        font-size: 3.2rem;
+        margin: 0;
+      }
+
+      @keyframes bob {
+        0% {
+          transform: translateY(0px);
         }
-
-        section.hero {
-            position: relative;
-            /* width: 100%; */
-            height: 90dvh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            align-content: center;
-            justify-content: center;
+        50% {
+          transform: translateY(8px);
         }
-
-        h1 {
-            color: #fff;
-            /* font-family: 'Rampart One'; */
-            font-family: 'IBM Plex Serif', sans-serif;
-            font-size: 2.3rem;
-            font-weight: 100;
-
-            text-align: center;
-
-            letter-spacing: -0.2rem;
-
-            margin: 0;
-            margin-bottom: -0.75rem;
+        100% {
+          transform: translateY(0px);
         }
+      }
 
-        h2 {
-            font-size: 3rem;
-            margin: 0;
-        }
+      img {
+        width: auto;
+        height: 128px;
+        position: absolute;
+        animation-name: bob;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
 
-        @keyframes bob {
-            0% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(8px);
-            }
-            100% {
-                transform: translateY(0px);
-            }   
-        }
+      section.signup {
+        background-color: #21162b;
+        /* width: 100%; */
 
-        img {
-            width: auto;
-            height: 128px;
-            position: absolute;
-            animation-name: bob;
-            animation-duration: 2s;
-            animation-iteration-count: infinite;
-        }
+        color: #fff;
+        padding: 32px;
+      }
 
-        section.signup {
-            background-color: #fff;
-            /* width: 100%; */
+      h3 {
+        font-size: 2rem;
+        font-weight: 400;
+        margin: 0;
+        margin-bottom: 1rem;
+      }
 
-            color: rgb(41, 7, 73);
-            padding: 32px;
-        }
+      div.skills {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+      }
 
-        h3 {
-            font-size: 2rem;
-            font-weight: 400;
-            margin: 0;
-            margin-bottom: 1rem;
-        }
+      div.skill {
+        /* background-color: rgb(41, 7, 73); */
+        background-color: #21162b;
+        box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.5);
 
+        border: 4px solid #514260;
+
+        color: #fff;
+        border-radius: 8px;
+        padding: 12px;
+      }
+
+      div.skill h4 {
+        font-weight: 300;
+        font-size: 1.4rem;
+        margin: 0;
+
+        font-family: 'IBM Plex Sans', sans-serif;
+      }
+
+      div.skill p {
+        text-align: left;
+        width: 100%;
+        font-size: 0.8rem;
+      }
+
+      @media only screen and (max-width: 500px) {
         div.skills {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
+          display: flex;
+          flex-direction: column;
         }
-
-        div.skill {
-            background-color: rgb(41, 7, 73);
-            color: #fff;
-            border-radius: 8px;
-            padding: 12px;
-        }
-
-        div.skill h4 {
-            font-weight: 200;
-            font-size: 1.4rem;
-            margin: 0;
-        }
-
-        div.skill p {
-            text-align: left;
-            width: 100%;
-            font-size: 0.8rem;
-        }
+      }
     </style>
-    <link rel="stylesheet" href="galaxy.css">
-</head>
-<body>
+    <link rel="stylesheet" href="galaxy.css" />
+  </head>
+  <body>
     <section class="hero">
-        <img src="assets/mascot1.png" style="top: 32px; right: 32px;">
-        <img src="assets/mascot2.png" style="bottom: 32px; left: 32px;">
-        <main>
-            <h1>HWSF</h1>
-            <h2>Robotics</h2>
-            <p>Thursday | 16:15 | Room 46</p>
-        </main>
+      <img src="assets/mascot1.png" style="top: 32px; right: 32px" />
+      <img src="assets/mascot2.png" style="bottom: 32px; left: 32px" />
+      <main>
+        <h1>HWSF</h1>
+        <h2>Robotics</h2>
+        <p>Thursday | 16:15 | Room 46</p>
+      </main>
     </section>
 
     <section class="signup">
-        <h3>Join in!</h3>
-        <div class="skills">
-            <div class="skill">
-                <h4>Programmer</h4>
-                <p>Working on what makes the robot run, we tend to program in Python (for the Raspberry Pi) and C++ (for the Arduinos). You don't have to be an expert in programming, though a working understanding helps.</p>
-            </div>
-
-            <div class="skill">
-                <h4>Engineer</h4>
-                <p>Design, make and print the components that make up the robot. Whether you are modelling a part in CAD software (which we provide) or actually fabricating it, engineering is open to all.</p>
-            </div>
-
-            <div class="skill">
-                <h4>Other</h4>
-                <p>If what you can help in isn't here (e.g. illustrators), then come along anyway, all experience is valuable!</p>
-            </div>
+      <h3>Join in!</h3>
+      <div class="skills">
+        <div class="skill">
+          <h4>Programmer</h4>
+          <p>
+            Working on what makes the robot run, we tend to program in Python
+            (for the Raspberry Pi) and C++ (for the Arduinos). You don't have to
+            be an expert in programming, though a working understanding helps.
+          </p>
         </div>
 
+        <div class="skill">
+          <h4>Engineer</h4>
+          <p>
+            Design, make and print the components that make up the robot.
+            Whether you are modelling a part in CAD software (which we provide)
+            or actually fabricating it, engineering is open to all.
+          </p>
+        </div>
+
+        <div class="skill">
+          <h4>Other</h4>
+          <p>
+            If what you can help in isn't here (e.g. illustrators), then come
+            along anyway, all experience is valuable!
+          </p>
+        </div>
+      </div>
     </section>
 
     <div class="bg"></div>
 
     <div class="star-field">
-    <div class="layer"></div>
-    <div class="layer"></div>
-    <div class="layer"></div>
+      <div class="layer"></div>
+      <div class="layer"></div>
+      <div class="layer"></div>
     </div>
-</body>
+  </body>
 </html>
